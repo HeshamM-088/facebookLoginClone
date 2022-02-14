@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Facebook-SignUp</title>
+</head>
+<body>
+    
+    <section id="registration-page">
+        <form class="signup-form" onsubmit=" return validationSign() " action="index.html">
+            
+            <div class="form-header">
+                <h1>Create Account</h1>
+            </div>
+            
+            <div class="form-body">
+            
+                <div class="row">
+                    <div class="input-group">
+                        <label class="test" id="fnamelabel">First Name :</label>
+                        <input title="Required-{FirstName only without any spaces}" autocomplete="off" id="fname" type="text" placeholder="Enter your first name">
+                    </div>
+                    <div class="input-group">
+                        <label id="lnamelabel">Last Name :</label>
+                        <input title="Required-{LastName only without any spaces}" autocomplete="off" id="lname" type="text" placeholder="Enter your last name">
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="input-group">
+                        <label id="emaillabel">Email :</label>
+                        <input title="Email shall be like : {name@domain.com}" autocomplete="off" id="email" type="text" placeholder="Enter your email address">
+                    </div>
+                    <div class="input-group">
+                        <label id="phonelabel">Phone Number :</label>
+                        <input title="Phone Number shall be 11 numbers like {01xx-xxx-xxxx}" autocomplete="off" id="phone" type="text" placeholder="Enter your phone number">
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label id="passwordlabel">Password :</label>
+                        <input title="Password shall be more than 5 characters" id="password" type="password" placeholder="Enter your password">
+                    </div>
+                    <div class="input-group">
+                        <label id="password2label">Confirm Password :</label>
+                        <input title="Password confirmation shall be the same with password" id="password2" type="password" placeholder="Confirm you password">
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="input-group">
+                        <label>Gender :</label>
+                        <div class="radio-group">
+                            <div>
+                                <label for="male">
+                                    <input required type="radio" name="gender" id="male">
+                                    Male
+                                </label>
+                            </div>
+                            <div>
+                                <label for="female">
+                                    <input required type="radio" name="gender" id="female">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Birthdate :</label>
+                        <div class="radio-group">
+                            <div>
+                                <label for="birthdate">
+                                    <input type="date" required>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <input type="reset" value="Reset" class="btn" onclick="resetSign()"></input>
+            <input type="submit" value="Register" class="btn"></input>     
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

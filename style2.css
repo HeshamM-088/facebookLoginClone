@@ -1,0 +1,148 @@
+:root {
+    --bg: #f0f2f5;
+    --blue: #1877f2;
+    --dark-blue: #1360c4;
+    --white: #FFF;
+    --green: #42b72a;
+    --dark-green: #369423;
+  }
+  
+  
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   user-select: none;
+   font-family: Helvetica, sans-serif;
+  }
+  
+body{
+  background-color: var(--bg);
+}
+
+#registration-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg);
+  }
+  
+  .signup-form  {
+    flex: 1;
+    max-width: 600px;
+    border-radius: 6px;
+    background-color: #EFF0F1;
+    box-shadow: 0px 0px 20px 5px darkgrey;
+    margin: 36px auto;
+  }
+  
+  /* FORM HEADER */
+  .form-header {
+    padding:15px 0;
+    border-bottom:1px solid #cccccc;
+    background: var(--blue);
+  }
+  
+  .form-header h1 {
+    font-size: 28px;
+    text-align:center;
+    color:white;
+  }
+  
+  /* FORM BODY */
+  .form-body {
+    background: white;
+    padding: 20px;
+  }
+  
+  .row {
+    display:flex; 
+  }
+  
+  .input-group {
+    flex:1;  
+    display:flex;
+    flex-direction:column; 
+    margin:17px 10px;
+    width: 45%;
+  }
+  
+  .radio-group label,
+  .checkbox-group label  {
+    color:#666;
+    cursor:pointer;
+  }
+
+  .radio-group > div{
+    padding: 10px 0 ;
+  }
+  
+  /* MOBILE VIEW */
+  @media (max-width: 767px) {
+
+    .row{
+      flex-direction:column; 
+      align-items: center;
+    }
+    .input-group{
+      width: 100%;
+    }
+    .signup-form{
+      max-width: 80%;
+    }
+  }
+  
+
+  .form-footer {
+    display:flex;
+    padding:10px;
+  }
+  
+  .btn {
+    padding: 14px;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  label {
+  color: var(--blue);
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: relative;
+  }
+  
+  input[type="text"],
+  input[type="email"] ,
+  input[type="password"],
+  input[type="date"],
+  select{
+    width: 100%;
+    height: 34px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--dark-blue);
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    outline-color: var(--blue);
+  }
+
+  input::placeholder{
+    font-size: 12px;
+  }
+
+  .emotion{
+    content: '&#128533;';
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  

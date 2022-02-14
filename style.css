@@ -1,0 +1,218 @@
+:root {
+  --bg: #f0f2f5;
+  --blue: #1877f2;
+  --dark-blue: #1360c4;
+  --white: #FFF;
+  --green: #42b72a;
+  --dark-green: #369423;
+}
+
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ user-select: none;
+}
+
+body {
+
+  background-color: var(--bg);
+  font-family: Helvetica, sans-serif;
+}
+
+#error{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main-wrapper {
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.branding {
+  text-align: center;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.slogan {
+    margin: 20px 0;
+    font-weight: 100;
+    line-height: 1.4;
+    color: #6e6d6d;
+}
+
+.panel {
+  background-color: var(--white);
+  width: 400px;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 20px 2px rgb(150 150 150);
+  text-align: center;
+}
+
+.panel form{
+  padding: 25px;
+}
+
+input {
+  min-width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #d2d2d2;
+  border-radius: 6px;
+  color: var(--dark-blue);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+input::placeholder{
+  font-size: 13px;
+  font-weight: 100;
+}
+
+input:focus {
+  outline: none;
+} 
+
+.log-in-button {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.log-in-button:hover {
+  background-color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.log-in-button:focus{
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+hr {
+  margin: 18px;
+  opacity: 0.3;
+}
+
+.register-button {
+  background-color: var(--green);
+  color: var(--white);
+  display: inline-block;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: bolder;
+}
+
+.register-button:hover {
+  text-decoration: none;
+  background-color: var(--dark-green);
+}
+
+.bottom-link {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.bottom-link p{
+  color: #6e6d6d;
+}
+
+.page {
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .main-wrapper {
+    width: 90%;
+    max-width: 980px;
+    flex-direction: row;
+    padding-top: 70px;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .branding {
+    text-align: left;
+    padding-top: 80px;
+    width: 480px;
+  }
+
+  .slogan {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 500px){
+  .panel{
+    width: -webkit-fill-available;
+    margin: 0;
+  }
+  .main-wrapper{
+    width: 90%;
+  } 
+  #error{
+    font-size: 15px;
+  }
+  .bottom-link{
+    margin-top: 15px;
+  }
+}
+
+
+/*main page*/
+.main-page{
+  background-color: var(--blue);
+}
+
+.main-fb{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-fb lottie-player{
+  width: 20%;
+}
+
+.main-page h2{
+  text-align: center;
+  margin: 50px auto;
+  text-transform: capitalize;
+  color: white;
+  font-size: 60px;
+  transition: 0.3s all;
+  width: 80%;
+}
+
+@media (max-width: 500px){
+  .main-page h2{
+    font-size: 50px;
+  }
+}

@@ -11,6 +11,11 @@ function validationSign(){
         pass2Label = document.getElementById("password2label"),
         phoneNumber = document.getElementById("phone").value,
         phoneNumberLabel = document.getElementById("phonelabel"),
+        genderMale = document.getElementById("male"),
+        genderFemale = document.getElementById("female"),
+        genderLabel = document.getElementById("mainGender"),
+        birthdate = document.getElementById("birthdate").value,
+        birthdateLabel = document.getElementById("mainBirth"),
         emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
         phonePattern = /^\(?([0-9]{4})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
         valid = true;
@@ -38,6 +43,14 @@ function validationSign(){
         resetSign();
         display(pass2Label, "Password not matched &#9940;")
         return valid = false;
+    }else if(genderMale.checked == false && genderFemale.checked == false){
+        resetSign();
+        display(genderLabel, "Gender must be selected &#9940;")
+        return valid = false;
+    }else if(birthdate === ""){
+        resetSign();
+        display(birthdateLabel, "Birthdate must be selected &#9940;")
+        return valid = false;
     }else{
      return  valid = true;
     }
@@ -58,6 +71,8 @@ function resetSign(){
     pass1Label = document.getElementById("passwordlabel"),
     pass2Label = document.getElementById("password2label"),
     phoneLabel = document.getElementById("phonelabel"),
+    genderLabel = document.getElementById("mainGender"),
+    birthdateLabel = document.getElementById("mainBirth"),
     arr;
 
     fNameLabel.innerHTML = "First Name :";
@@ -65,10 +80,12 @@ function resetSign(){
     emailLabel.innerHTML = "Email :";
     pass1Label.innerHTML = "Password :";
     pass2Label.innerHTML = "Confirm Password :";
-    phoneLabel.innerHTML = "Phone Number :"
+    phoneLabel.innerHTML = "Phone Number :";
+    genderLabel.innerHTML = "Gender :";
+    birthdateLabel.innerHTML = "Birthdate :";
 
 
-    arr = [fNameLabel, lNameLabel, emailLabel, pass1Label, pass2Label, phoneLabel];
+    arr = [fNameLabel, lNameLabel, emailLabel, pass1Label, pass2Label, phoneLabel, genderLabel, birthdateLabel];
 
     for(var i = 0; i < arr.length ; i++){
         arr[i].style.color = '#1877f2';

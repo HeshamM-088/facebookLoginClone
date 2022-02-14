@@ -74,6 +74,10 @@ body{
     cursor:pointer;
   }
 
+  .radio-group label:focus-within{
+    color: var(--blue);
+  }
+
   .radio-group > div{
     padding: 10px 0 ;
   }

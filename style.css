@@ -216,3 +216,33 @@ hr {
     font-size: 50px;
   }
 }
+
+.invalid{
+  color: red;
+  font-size: 13px;
+  margin: 0px auto 10px auto;
+}
+.invalid::before{
+  position: relative;
+  content: "✖";
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.valid{
+  color: green;
+  font-size: 13px;
+  margin: 0px auto 10px auto;
+}
+
+.valid::before{
+  position: relative;
+  content: "✔";
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+#passMessage{
+  display: none;
+  position: relative;
+}

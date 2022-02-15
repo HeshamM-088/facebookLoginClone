@@ -139,3 +139,25 @@ function validationLogIn(){
         return loginValid = true;
     }
 }
+/*************************************************************/
+let validPassLabel = document.getElementById("passMessage"),
+    passContent = document.getElementById("length"),
+    passInput = document.getElementById("loginPass");
+
+    passInput.onfocus = () =>{
+        validPassLabel.style.display = "block";
+    }
+
+    passInput.onblur = () => {
+        validPassLabel.style.display = "none";
+    }
+
+    passInput.onkeyup = () =>{
+        if(passInput.value.length >= 6){
+            passContent.classList.remove("invalid");
+            passContent.classList.add("valid");
+        }else{
+            passContent.classList.remove("valid");
+            passContent.classList.add("invalid");
+        }
+    }

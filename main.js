@@ -161,3 +161,14 @@ let validPassLabel = document.getElementById("passMessage"),
             passContent.classList.add("invalid");
         }
     }
+
+    /****************************************************/
+    function showMyPassword() {
+        let myPassword = document.getElementById("loginPass");
+
+        if(myPassword.type === "password"){
+            myPassword.type = "text";
+        }else{
+            myPassword.type = "password";
+        }
+    }

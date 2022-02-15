@@ -20,6 +20,11 @@
         <form onsubmit=" return validationLogIn() " action="fb.html">
           <input id="loginUser" type="text" name="username" placeholder="Email address or phone number" autocomplete="off">
           <input id="loginPass" type="password" name="password" placeholder="Password">
+          
+          <div id="passMessage">
+            <p id="length" class="invalid">Password should be more than <strong>6 characters</strong></p>
+          </div>
+          
           <input class="log-in-button" type="submit" value="Log In">
         </form>
         <a class="forgot" href="#">Forget Password?</a>

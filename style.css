@@ -246,3 +246,22 @@ hr {
   display: none;
   position: relative;
 }
+.showPass{
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding: 0 0 10px 1px;
+  gap: 6px;
+}
+
+.showPass p{
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.inputshowpassword{
+  min-width: inherit;
+  padding: inherit;
+  margin: inherit;
+  cursor: pointer;
+}
